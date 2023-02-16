@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Assignment 4 login </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container vh-100 d-flex justify-content-center  ">
+        <div class="login  p-5 mt-5 text-center">
+            <h1 class="fw-bold">Smart Login System</h1>
+            <input type="email" name="" id="userEmail" class="form-control my-3" placeholder="Enter your Email" required>
+            <input type="password" name="" id="userPass" class="form-control my-3" placeholder="Enter your Password" 
+            onfocus="showFunc()"  onblur="hideFunc()" onkeyup="passValidation()"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+            title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+            <button class="btn btn-outline-info form-control my-3" onclick="authenticateLogin()">Login</button>
+            <p class="h4" id="loginMessage"></p>
+            
+            <!-- password Message -->
+            <div id="passMessage" class="d-none" >
+                <h4>Password must contain the following</h4>
+                <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+                <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+                <p id="number" class="invalid">A <b>number</b></p>
+                <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+              </div>
+            <!-- -------------------- -->
+            <h5 class="text-white">Don’t have an account? <a href="registration.html" class="text-decoration-none">Sign Up</a></h5>
+        </div>
+    </div>
+   
+
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+
+</body>
+</html>
